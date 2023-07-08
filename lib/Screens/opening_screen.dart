@@ -12,8 +12,7 @@ class OpeningScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    "https://i.pinimg.com/736x/20/0b/b0/200bb02a2d168f3dd59c61ca4cca8bb9.jpg"),
+                image: AssetImage("assets/images/backgroundImage.jpg"),
                 fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
