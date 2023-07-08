@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class D3Task1 extends StatelessWidget {
   const D3Task1({super.key});
-
+  static String id = "D3Task1";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: const Color.fromARGB(210, 57, 31, 11),
+      backgroundColor: const Color.fromARGB(255, 11, 201, 219),
       body: Stack(
         children: [
           Positioned(
@@ -37,9 +37,11 @@ class D3Task1 extends StatelessWidget {
             child: Container(
               width: double.infinity,
               height: 500,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 238, 238, 238),
-                borderRadius: BorderRadius.circular(50),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 238, 238, 238),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(50),
+                ),
               ),
               child: Column(
                 children: [
@@ -137,11 +139,12 @@ class D3Task1 extends StatelessWidget {
                           color: Color.fromRGBO(133, 132, 132, 1),
                         ),
                       ),
+                      // register btn
                       GestureDetector(
                         child: const Text(
                           "Register?",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 33, 47, 243),
+                            color: Color.fromARGB(255, 11, 201, 219),
                           ),
                         ),
                       ),
@@ -150,13 +153,14 @@ class D3Task1 extends StatelessWidget {
                       ),
                     ],
                   ),
+                  // login btn
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 20),
                     width: 150,
                     height: 40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromARGB(190, 73, 85, 255),
+                      color: const Color.fromARGB(255, 11, 201, 219),
                     ),
                     child: ElevatedButton(
                       onPressed: () {},

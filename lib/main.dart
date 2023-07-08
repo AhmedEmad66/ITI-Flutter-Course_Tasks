@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iti_quiz_app/Screens/opening_screen.dart';
 import 'Screens/d3_task1.dart';
 
 void main() {
@@ -9,9 +10,13 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: D3Task1(),
+      initialRoute: OpeningScreen.id,
+      routes: {
+        D3Task1.id: (context) => const D3Task1(),
+        OpeningScreen.id: (context) => const OpeningScreen(),
+      },
     );
   }
 }
