@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:iti_quiz_app/Screens/signup_page.dart';
+import 'categories_screen.dart';
 
-class D3Task1 extends StatelessWidget {
-  const D3Task1({super.key});
-  static String id = "D3Task1";
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+  static String id = "LoginScreen";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,11 +19,13 @@ class D3Task1 extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                // Logo Image
                 Image.asset(
                   "assets/images/quizLogo.png",
                   width: 80,
                   height: 80,
                 ),
+                // description Image
                 Image.asset(
                   "assets/images/testing.png",
                   width: 200,
@@ -36,7 +40,7 @@ class D3Task1 extends StatelessWidget {
             right: 0,
             child: Container(
               width: double.infinity,
-              height: 500,
+              height: MediaQuery.of(context).size.height * 2 / 3.2,
               decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 238, 238, 238),
                 borderRadius: BorderRadius.vertical(
@@ -59,7 +63,7 @@ class D3Task1 extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  // user
+                  // userName
                   Container(
                     width: 300,
                     height: 45,
@@ -141,6 +145,9 @@ class D3Task1 extends StatelessWidget {
                       ),
                       // register btn
                       GestureDetector(
+                        onTap: () {
+                          Navigator.popAndPushNamed(context, SignUpPage.id);
+                        },
                         child: const Text(
                           "Register?",
                           style: TextStyle(
@@ -163,7 +170,9 @@ class D3Task1 extends StatelessWidget {
                       color: const Color.fromARGB(255, 11, 201, 219),
                     ),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.popAndPushNamed(context, CategoriesScreen.id);
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(Colors.transparent),
@@ -215,17 +224,22 @@ class D3Task1 extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: 15,
-                              height: 15,
-                              child: IconButton(
-                                onPressed: () {},
-                                padding: EdgeInsets.zero,
-                                icon: const Icon(
-                                  Icons.check_box_outlined,
-                                  color: Color(0xFF7B7B7B),
-                                  size: 15,
-                                ),
-                              ),
+                              width: 10,
+                              height: 10,
+                              child:
+                                  Checkbox(value: false, onChanged: (value) {}),
+                              // IconButton(
+                              //   onPressed: () {},
+                              //   padding: EdgeInsets.zero,
+                              //   icon: const Icon(
+                              //     Icons.check_box_outlined,
+                              //     color: Color(0xFF7B7B7B),
+                              //     size: 15,
+                              //   ),
+                              // ),
+                            ),
+                            const SizedBox(
+                              width: 5,
                             ),
                             const Text(
                               "Remember Me",
