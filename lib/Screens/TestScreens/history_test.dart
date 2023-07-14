@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../Components/back_arrow.dart';
 import '../../Components/test_btn.dart';
 import '../../constants.dart';
-import '../score_screen.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});

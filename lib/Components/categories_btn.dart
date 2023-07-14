@@ -13,13 +13,12 @@ class CategoriesBTN extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: GestureDetector(
         onTap: onTap,
         child: Container(
           // margin: const EdgeInsets.only(bottom: 20),
           width: double.infinity,
-          height: MediaQuery.of(context).size.height*1/3,
           decoration: BoxDecoration(
             color: color,
             // borderRadius: BorderRadius.circular(15),

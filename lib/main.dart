@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: OpeningScreen.id,
       routes: {
-        LoginScreen.id: (context) => const LoginScreen(),
+        LoginScreen.id: (context) =>  LoginScreen(),
         OpeningScreen.id: (context) => const OpeningScreen(),
         CategoriesScreen.id:(context) => const CategoriesScreen(),
         SportsTestScreen.id:(context) => const SportsTestScreen(),
